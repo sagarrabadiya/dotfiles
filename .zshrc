@@ -96,6 +96,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
-export PATH="$PATH:/mnt/c/Android/platform-tools"
+export ANDROID_HOME="$HOME/android"
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 #cd ~/
 source ~/.aliases
+#~/start-services.sh
