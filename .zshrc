@@ -7,8 +7,8 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="spaceship"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 #ZSH_THEME="node"
 
 # Set list of themes to load
@@ -66,6 +66,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# start tmux
+#zstyle ':omz:module:tmux' auto-start 'yes'
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -95,12 +99,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export N_PREFIX=$HOME/n
+
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export ANDROID_HOME="$HOME/android"
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$N_PREFIX/bin
 
 #cd ~/
 source ~/.aliases
 #~/start-services.sh
+
