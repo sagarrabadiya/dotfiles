@@ -56,19 +56,22 @@ ZSH_THEME="spaceship"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
+# start tmux
+zstyle ':omz:module:tmux' auto-start 'yes'
+#if [ "$TMUX" = "" ]; then tmux; fi
+export ZSH_TMUX_AUTOSTART=true
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git node npm zsh-autosuggestions colored-man colorize github zsh-syntax-highlighting
+  git node npm zsh-autosuggestions colored-man colorize github zsh-syntax-highlighting tmux
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# start tmux
-#zstyle ':omz:module:tmux' auto-start 'yes'
-if [ "$TMUX" = "" ]; then tmux; fi
 
 # User configuration
 
