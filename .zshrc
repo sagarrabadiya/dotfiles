@@ -58,7 +58,7 @@ ZSH_THEME="spaceship"
 
 
 # start tmux
-zstyle ':omz:module:tmux' auto-start 'yes'
+#zstyle ':omz:module:tmux' auto-start 'yes'
 #if [ "$TMUX" = "" ]; then tmux; fi
 export ZSH_TMUX_AUTOSTART=true
 
