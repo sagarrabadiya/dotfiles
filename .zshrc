@@ -7,9 +7,9 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="spaceship"
-#ZSH_THEME="node"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="spaceship"
+#ZSH_THEME="avit"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -67,7 +67,7 @@ export ZSH_TMUX_AUTOSTART=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git node npm zsh-autosuggestions colored-man colorize github zsh-syntax-highlighting tmux
+  git zsh-autosuggestions colored-man colorize zsh-syntax-highlighting tmux
 )
 
 source $ZSH/oh-my-zsh.sh
