@@ -67,7 +67,7 @@ export ZSH_TMUX_AUTOSTART=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git zsh-autosuggestions colored-man colorize zsh-syntax-highlighting tmux
+  zsh-autosuggestions colored-man colorize zsh-syntax-highlighting tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,7 +115,9 @@ export PATH=$PATH:$N_PREFIX/bin
 source ~/.aliases
 #~/start-services.sh
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+#spaceship prompt character
+SPACESHIP_CHAR_SYMBOL="\ue0b0 "
+
 
 #Change ls colours
 LS_COLORS="ow=01;36;40" && export LS_COLORS
