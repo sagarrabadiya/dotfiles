@@ -116,7 +116,8 @@ source ~/.aliases
 #~/start-services.sh
 
 #spaceship prompt character
-SPACESHIP_CHAR_SYMBOL="\ue0b0 "
+#SPACESHIP_CHAR_SYMBOL="\ue0b0 " #left arrow like agnoster
+SPACESHIP_CHAR_SYMBOL="\u2B9E "
 
 
 #Change ls colours
