@@ -7,8 +7,8 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="spaceship"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 #ZSH_THEME="avit"
 
 # Set list of themes to load
@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export N_PREFIX=$HOME/n
+#export N_PREFIX=$HOME/n
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export ANDROID_HOME="$HOME/android"
@@ -115,3 +115,12 @@ export PATH=$PATH:$N_PREFIX/bin
 source ~/.aliases
 #~/start-services.sh
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+#Change ls colours
+LS_COLORS="ow=01;36;40" && export LS_COLORS
+
+#make cd use the ls colours
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
