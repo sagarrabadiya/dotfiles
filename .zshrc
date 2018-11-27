@@ -7,8 +7,8 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="spaceship"
 #ZSH_THEME="avit"
 
 # Set list of themes to load
@@ -60,7 +60,7 @@ ZSH_THEME="spaceship"
 # start tmux
 #zstyle ':omz:module:tmux' auto-start 'yes'
 #if [ "$TMUX" = "" ]; then tmux; fi
-export ZSH_TMUX_AUTOSTART=true
+#export ZSH_TMUX_AUTOSTART=true
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -110,6 +110,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$N_PREFIX/bin
+
+# vscode xdebug key
+export XDEBUG_CONFIG="idekey=VSCODE"
 
 #cd ~/
 source ~/.aliases
