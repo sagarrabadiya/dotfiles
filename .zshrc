@@ -110,6 +110,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$N_PREFIX/bin
+export PATH="$PATH:$HOME/.local/bin"
 
 # vscode xdebug key
 export XDEBUG_CONFIG="idekey=VSCODE"
