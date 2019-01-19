@@ -112,6 +112,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$N_PREFIX/bin
 export PATH="$PATH:$HOME/.local/bin"
 
+#javahome
+export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+
+
 # vscode xdebug key
 export XDEBUG_CONFIG="idekey=VSCODE"
 
@@ -131,3 +135,9 @@ LS_COLORS="ow=01;36;40" && export LS_COLORS
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 autoload -Uz compinit
 compinit
+
+###-tns-completion-start-###
+if [ -f /home/sagar/.tnsrc ]; then 
+    source /home/sagar/.tnsrc 
+fi
+###-tns-completion-end-###
