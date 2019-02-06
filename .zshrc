@@ -111,6 +111,8 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$N_PREFIX/bin
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+
 
 #javahome
 export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
