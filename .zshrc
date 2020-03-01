@@ -116,7 +116,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 
 #javahome
-#export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 
 
 # vscode xdebug key
