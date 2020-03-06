@@ -1,0 +1,60 @@
+#!/bin/bash
+
+sudo apt-get update
+
+echo 'Install common tools'
+echo '-----------------'
+sudo apt-get install git curl wget build-essentials
+
+
+# Hide "last login" line when starting a new terminal session
+touch $HOME/.git-credentials
+
+# Install zsh
+echo 'Install oh-my-zsh'
+echo '-----------------'
+rm -rf $HOME/.oh-my-zsh
+curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+# Symlink zsh prefs
+rm $HOME/.zshrc
+ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
+
+
+echo 'Install node'
+echo '-----------'
+curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
+bash n lts
+
+echo 'Install Java'
+echo '-----------'
+sudo add-apt-repository ppa:linuxuprising/java -y
+sudo apt update
+sudo apt-get install oracle-java13-installer -y
+sudo apt-get install oracle-java13-set-default -y
+
+
+echo 'Install zsh-autosuggestions'
+echo '---------------------------'
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+
+echo 'Install zsh-syntaxthilight'
+echo '---------------------------'
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+echo 'Install zsh-powerlevel10k'
+echo '---------------------------'
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
+ln -s $HOME/.dotfiles/shell/.tmux.conf $HOME/.tmux.conf
+ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
+
+
+
+echo '++++++++++++++++++++++++++++++'
+echo '++++++++++++++++++++++++++++++'
+echo 'All done!'
+echo '++++++++++++++++++++++++++++++'
+echo '++++++++++++++++++++++++++++++'
