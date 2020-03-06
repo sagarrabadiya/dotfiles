@@ -61,7 +61,7 @@ ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 ln -s $HOME/.dotfiles/shell/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
 
-
+chsh -s $(which zsh)
 
 
 echo '++++++++++++++++++++++++++++++'

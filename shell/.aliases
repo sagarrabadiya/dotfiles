@@ -1,4 +1,4 @@
-alias gc=git commit -m
-alias nah=git checkout .
-alias push=git push
-alias pull=git pull
+alias gc="git commit -m"
+alias nah="git checkout ."
+alias push="git push"
+alias pull="git pull"
