@@ -1,0 +1,9 @@
+[credential]
+	helper = store --file ~/.git-credentials
+[user]
+	email = sam.coolone70@gmail.com
+	name = sagar rabadiya
+[core]
+	autocrlf = input
+[push]
+	default = current
