@@ -25,6 +25,7 @@ echo 'Install node'
 echo '-----------'
 curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
 bash n lts
+rm -rf n
 
 echo 'Install Java'
 echo '-----------'
@@ -50,6 +51,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/the
 ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 ln -s $HOME/.dotfiles/shell/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
+
+source ~/.zshrc
 
 
 
