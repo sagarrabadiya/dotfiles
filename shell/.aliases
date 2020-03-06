@@ -1,2 +1,4 @@
-alias start_flotomate_server='cd ~/Code/flotomate/server_projects/main_server/boot && mvn spring-boot:run -Drun.jvmArguments="-agentlib:jdwp=transport=dt_socket,address=1043,server=y,suspend=n -Dspring.profiles.active=local -DconfigDir=src/main/resources -DlogDir=logs -DdbsDir=db-scripts -DfileDb=filedb -DtmpDir=fmtTemp -DpatchDb=patchdb -DinstallationType=fresh -DDummy=fresh -Xms500m -Xmx1024m"'
-alias clean='mvn clean -DskipTests=true'
+alias gc=git commit -m
+alias nah=git checkout .
+alias push=git push
+alias pull=git pull

@@ -27,8 +27,12 @@ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
 bash n lts
 rm -rf n
 
+echo 'Install Yarn'
+echo '------------'
+npm install -g yarn
+
 echo 'Install Java'
-echo '-----------'
+echo '------------'
 sudo add-apt-repository ppa:linuxuprising/java -y
 sudo apt update
 sudo apt-get install oracle-java13-installer -y
