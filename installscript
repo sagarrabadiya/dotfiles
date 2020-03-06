@@ -4,7 +4,7 @@ sudo apt-get update
 
 echo 'Install common tools'
 echo '-----------------'
-sudo apt-get install git curl wget build-essential zsh
+sudo apt-get install git curl wget build-essential zsh -y
 
 
 # Hide "last login" line when starting a new terminal session
@@ -19,6 +19,7 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/in
 # Symlink zsh prefs
 rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/shell/.aliases $HOME/.aliases
 
 
 echo 'Install node'
@@ -54,13 +55,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 echo 'Install zsh-powerlevel10k'
 echo '---------------------------'
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 ln -s $HOME/.dotfiles/shell/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
 
-source ~/.zshrc
 
 
 
