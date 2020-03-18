@@ -63,6 +63,9 @@ ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
 
 chsh -s $(which zsh)
 
+echo 'Starting Dbus'
+sudo /etc/init.d/dbus start &> /dev/null
+
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
