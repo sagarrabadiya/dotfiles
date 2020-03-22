@@ -37,7 +37,7 @@ echo '------------'
 npm install -g yarn
 
 echo 'Install cypress tools'
-sudo apt install libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
+sudo apt install libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 -y
 
 echo 'Install Java'
 echo '------------'

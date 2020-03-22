@@ -5,6 +5,7 @@
 	name = sagar rabadiya
 [core]
 	autocrlf = input
+	fileMode = false
 [push]
 	default = current
 [http]
