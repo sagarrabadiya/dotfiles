@@ -11,7 +11,7 @@
       // Put settings here that you want to apply to all profiles
       "cursorColor": "#FFFFFF",
       "cursorShape": "bar",
-      "fontFace": "Delugia Nerd Font Book",
+      "fontFace": "JetbrainsMono NF",
       "fontSize": 11,
       "useAcrylic": true,
       "acrylicOpacity": 0.8,
