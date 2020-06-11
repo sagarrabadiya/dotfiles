@@ -8,7 +8,7 @@
       // Put settings here that you want to apply to all profiles
       "cursorColor": "#FFFFFF",
       "cursorShape": "bar",
-      "fontFace": "DankMono Nerd Font Mono",
+      "fontFace": "Dank Mono",
       "fontSize": 13,
       "useAcrylic": true,
       "acrylicOpacity": 0.8,
