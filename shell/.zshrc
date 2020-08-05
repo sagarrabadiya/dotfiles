@@ -116,7 +116,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 
 #javahome
-export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+#export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 
 
 # vscode xdebug key
@@ -147,3 +147,5 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/shell/.p10k.zsh.
+[[ ! -f ~/.dotfiles/shell/.p10k.zsh ]] || source ~/.dotfiles/shell/.p10k.zsh
