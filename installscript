@@ -67,7 +67,7 @@ echo 'Install Spaceship Prompt'
 echo '---------------------------'
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+ln -s ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship.zsh-theme
 ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 ln -s $HOME/.dotfiles/shell/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
