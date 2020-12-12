@@ -36,6 +36,9 @@ echo 'Install Yarn'
 echo '------------'
 npm install -g yarn
 
+# install jre
+sudo apt-get install default-jre -y
+
 # echo 'Install cypress tools'
 # sudo apt install libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 -y
 
@@ -60,6 +63,11 @@ echo 'Install zsh-powerlevel10k'
 echo '---------------------------'
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
+echo 'Install Spaceship Prompt'
+echo '---------------------------'
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 ln -s $HOME/.dotfiles/shell/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
