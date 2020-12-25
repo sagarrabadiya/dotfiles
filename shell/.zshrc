@@ -75,6 +75,15 @@ plugins=(
 zsh-autosuggestions colorize zsh-syntax-highlighting
 )
 
+eval $(~/.linuxbrew/bin/brew shellenv)
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -107,21 +116,19 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #export N_PREFIX=$HOME/n
 
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-export ANDROID_HOME="$HOME/android"
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$N_PREFIX/bin
+#export PATH="$PATH:$HOME/.composer/vendor/bin"
+#export ANDROID_HOME="$HOME/android"
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/tools/bin
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="$PATH:$HOME/.local/bin"
-
 
 #javahome
 #export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 
 
 # vscode xdebug key
-export XDEBUG_CONFIG="idekey=VSCODE"
+#export XDEBUG_CONFIG="idekey=VSCODE"
 
 source ~/.aliases
 
@@ -151,4 +158,4 @@ fi
 #[[ ! -f ~/.dotfiles/shell/.p10k.zsh ]] || source ~/.dotfiles/shell/.p10k.zsh
 
 # export wsl display
-export DISPLAY=$(ip route show default | grep -Po 'via \K\S+'):0
+#export DISPLAY=$(ip route show default | grep -Po 'via \K\S+'):0
