@@ -75,15 +75,6 @@ plugins=(
 zsh-autosuggestions colorize zsh-syntax-highlighting
 )
 
-eval $(~/.linuxbrew/bin/brew shellenv)
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -156,6 +147,15 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/shell/.p10k.zsh.
 [[ ! -f ~/.dotfiles/shell/.p10k.zsh ]] || source ~/.dotfiles/shell/.p10k.zsh
+
+eval $(~/.linuxbrew/bin/brew shellenv)
+
+if type brew &>/dev/null; then
+ FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+ autoload -Uz compinit
+ compinit
+fi
 
 # export wsl display
 #export DISPLAY=$(ip route show default | grep -Po 'via \K\S+'):0
